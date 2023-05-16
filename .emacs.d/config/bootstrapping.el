@@ -22,9 +22,9 @@
 
 
 ;; start a server, unless one is already running
-(when (require 'server nil t)
-  (unless (server-running-p)
-    (server-start)))
+;; (when (require 'server nil t)
+;;   (unless (server-running-p)
+;;     (server-start)))
 
 ;; Bootstrapping STRAIGHT.EL for functional package management
 (defvar bootstrap-version)
