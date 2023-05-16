@@ -1,3 +1,4 @@
+(set-file-modes (expand-file-name "~/.emacs.d/server") #o700)
 (setq init-file-location (file-name-directory (or load-file-name (buffer-file-name))))
 (load-library (format "%sbootstrap.el" init-file-location))
 (mapc 'load (file-expand-wildcards (format "%sconfig/*.el" init-file-location)))
