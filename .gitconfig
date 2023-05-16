@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Patrick Brown
+	email = contactpatbrown@gmail.com
+[alias]
+	last = log -1 HEAD
+[core]
+	editor = emacs
+[init]
+	defaultBranch = main
+[github]
+	user = patbrown

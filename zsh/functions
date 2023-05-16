@@ -1,0 +1,22 @@
+function bbe () {
+bb -e "$1"
+}
+
+function bbf () {
+bb -f "$1"
+}
+
+function run-main () {
+clojure -M -m "$1"
+}
+function ed () {
+find /home/pat ! -name '*.class' ! -path '*.git*' -type d | fzf --header 'ENTER to edit' --reverse --preview='pistol {}' --bind 'ENTER:execute(emacsclient -t {})' --margin=3%
+}
+
+function ef () {
+find * ! -name '*.class' ! -path '*.git*' -type f | fzf --header 'ENTER to edit' --reverse --preview='pistol {}' --bind 'ENTER:execute(emacsclient -t {})' --margin=3%
+}
+function fcd () {
+cd $(find /home/pat -type d | fzf --header 'CD into' --reverse --preview='pistol {}' --margin=3%)
+}
+

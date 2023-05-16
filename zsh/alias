@@ -1,0 +1,36 @@
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+# easier to read disk
+alias df='df -h'     # human-readable sizes
+alias free='free -m' # show sizes in MB
+
+# get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4 | head -5'
+
+# get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3 | head -5'
+
+# replacing ls with exa only still typing ls
+alias l="exa"
+#alias ll="exa -la"
+#alias ls="exa -a"
+
+alias szsh="source ~/.zshrc"
+alias sw="npx shadow-cljs watch "
+alias ion="clojure -A:ion-dev "
+alias ion-push="(cd ~/nd && clojure -A:ion-dev '{:op :push}' )"
+
+alias dev-build='(cd $DEV_BOX_FS && packer build .)'
+alias dev-deploy='(cd $DEV_BOX_FS && terraform apply -auto-approve)'
+alias dev-shell="ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no dev@live.drilling.net -i $DEV_BOX_FS/include/tf-packer"
+alias k="kubectl"
+alias kctx="kubectl ctx"
+alias kns="kubectl ns"
