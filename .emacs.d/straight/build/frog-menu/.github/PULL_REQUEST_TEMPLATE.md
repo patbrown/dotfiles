@@ -1,1 +1,0 @@
-/Users/pat/.emacs.d/straight/repos/frog-menu/.github/PULL_REQUEST_TEMPLATE.md

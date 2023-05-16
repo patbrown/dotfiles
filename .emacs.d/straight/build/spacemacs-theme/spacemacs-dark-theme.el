@@ -1,1 +1,0 @@
-/Users/pat/.emacs.d/straight/repos/spacemacs-theme/spacemacs-dark-theme.el

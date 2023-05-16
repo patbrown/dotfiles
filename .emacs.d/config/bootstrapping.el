@@ -8,10 +8,6 @@
       (tooltip-mode -1)
       (set-fringe-mode 6)
       (scroll-bar-mode -1)))
-;(scroll-bar-mode -1)
-;(tool-bar-mode -1)
-;(tooltip-mode -1)
-;(set-fringe-mode 10)
 (menu-bar-mode -1)
 (setq visible-bell t)
 (setq package-enable-at-startup nil)
@@ -31,7 +27,6 @@
     (server-start)))
 
 ;; Bootstrapping STRAIGHT.EL for functional package management
-(setq straight-use-package-by-default t)
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))

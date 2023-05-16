@@ -1,1 +1,0 @@
-/Users/pat/.emacs.d/straight/repos/smart-mode-line/smart-mode-line-respectful-theme.el

@@ -106,19 +106,19 @@
 (eval-after-load 'term
   '(term-set-escape-char ?\C-x))
 
-(use-package multiple-cursors :straight t :defer t)
-(use-package smartrep :straight t)
-(use-package npm :straight t :defer t)
-(use-package crux :straight t :defer t)
-(use-package keycast :straight t)
-(use-package browse-kill-ring :straight t :defer t
+(use-package multiple-cursors  :defer t)
+(use-package smartrep )
+(use-package npm  :defer t)
+(use-package crux  :defer t)
+(use-package keycast )
+(use-package browse-kill-ring  :defer t
   :init (global-set-key (kbd "C-c C-y") 'browse-kill-ring))
-(use-package easy-kill :straight t :defer t
+(use-package easy-kill  :defer t
   :config (global-set-key [remap kill-ring-save] 'easy-kill))
-(use-package clipetty :straight t
+(use-package clipetty 
   :hook (after-init . global-clipetty-mode))
 
-(use-package fzf :straight t
+(use-package fzf 
   :config
     (setq fzf/args "-x --color bw --print-query --margin=1,0 --no-hscroll"
         fzf/executable "fzf"
@@ -127,7 +127,7 @@
         fzf/position-bottom t
         fzf/window-height 15))
 
-(use-package smart-mode-line :straight t :defer t
+(use-package smart-mode-line  :defer t
   :init
   (setq sml/name-width 40)
   (setq sml/mode-width 'full)
@@ -143,16 +143,16 @@
      '(defadvice ,mode (after rename-modeline activate)
         (setq mode-name ,new-name))))
 
-(use-package which-key :straight t :defer t
+(use-package which-key  :defer t
   :init
   (require 'which-key)
   (which-key-mode))
 
-(use-package discover :straight t :defer t
+(use-package discover  :defer t
   :config
   (global-discover-mode 1))
 
-(use-package discover-my-major :straight t :defer t
+(use-package discover-my-major  :defer t
   :config
   (global-set-key (kbd "C-h C-m") 'discover-my-major))
 

@@ -1,9 +1,9 @@
-(use-package disable-mouse :straight t
+(use-package disable-mouse 
   :init
   (global-disable-mouse-mode))
 
-(use-package hydra :straight t :defer t)
-(use-package avy :straight t :defer t)
+(use-package hydra  :defer t)
+(use-package avy  :defer t)
 
 ;; Tab line mode
 (global-tab-line-mode t)
@@ -12,20 +12,19 @@
 (setq tab-line-close-button-show nil)
 
 (use-package key-chord
-  :straight t
   :defer t
   :init
   (key-chord-mode 1)
   (key-chord-define-global "fj" 'hack/body))
 
-(use-package frog-jump-buffer :straight t :defer t)
-(use-package ace-mc :straight t :defer t)
-(use-package expand-region :straight t :defer t)
-(use-package zzz-to-char :straight t :defer t)
-(use-package goto-last-change :straight t :defer t)
-(use-package ace-window :straight t :defer t)
+(use-package frog-jump-buffer  :defer t)
+(use-package ace-mc  :defer t)
+(use-package expand-region  :defer t)
+(use-package zzz-to-char  :defer t)
+(use-package goto-last-change  :defer t)
+(use-package ace-window  :defer t)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
-(use-package ace-jump-zap :straight t :defer t)
+(use-package ace-jump-zap  :defer t)
 
 (defhydra hack (global-map "C-c '")
   ("c" avy-goto-char :exit t)
@@ -53,7 +52,7 @@
   ("d" cider-docview-source))
 
 (use-package ace-jump-mode
-  :straight t
+  
   :init
   (autoload 'ace-jump-mode "ace-jump-mode" "Emacs quick move minor mode" t)
   ;(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
@@ -63,7 +62,7 @@
 (winner-mode 1)
 
 (use-package windmove
-  :straight t
+  
   :config
   (defun ignore-error-wrapper (fn)
     "Funtion return new function that ignore errors.
@@ -74,7 +73,7 @@
         (ignore-errors
           (funcall fn))))))
 
-(use-package buffer-move :straight t)
+(use-package buffer-move )
 
 (defun rotate-windows ()
   "Rotate your windows"
@@ -110,7 +109,6 @@
       (move-beginning-of-line 1))))
 
 (use-package multiple-cursors
-  :straight t
   :defer t
   :bind (("C-C M->" . mc/mark-next-like-this)
          ("C-c M-<" . mc/mark-previous-like-this)
@@ -118,7 +116,6 @@
          ("C-c C-c M-!" . mc/edit-lines)))
 
 (use-package undo-tree
-  :straight t
   :defer t
   :diminish undo-tree-mode
   :init
@@ -130,7 +127,6 @@
     (setq undo-tree-visualizer-diff t)))
 
 (use-package zoom
-  :straight t
   :init
   (progn
     (custom-set-variables

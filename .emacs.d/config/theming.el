@@ -1,5 +1,4 @@
 (use-package spacemacs-theme
-  :straight t
   :ensure t
   :init (load-theme 'spacemacs-dark t))
 

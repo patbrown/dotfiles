@@ -1,1 +1,0 @@
-/Users/pat/.emacs.d/straight/repos/burly.el/burly.el

@@ -1,1 +1,0 @@
-/Users/pat/.emacs.d/straight/repos/rich-minority/rich-minority.el

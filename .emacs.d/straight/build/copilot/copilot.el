@@ -1,1 +1,0 @@
-/Users/pat/.emacs.d/straight/repos/copilot.el/copilot.el

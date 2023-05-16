@@ -1,1 +1,0 @@
-/Users/pat/.emacs.d/straight/repos/clipetty/clipetty.el
