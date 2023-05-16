@@ -1,0 +1,1 @@
+/Users/pat/.emacs.d/straight/repos/swiper/ivy-faces.el

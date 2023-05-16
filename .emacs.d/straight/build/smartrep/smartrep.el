@@ -1,0 +1,1 @@
+/Users/pat/.emacs.d/straight/repos/smartrep.el/smartrep.el

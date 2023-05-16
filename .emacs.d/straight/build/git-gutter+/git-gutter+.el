@@ -1,0 +1,1 @@
+/Users/pat/.emacs.d/straight/repos/git-gutter-plus/git-gutter+.el

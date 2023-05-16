@@ -1,0 +1,1 @@
+/Users/pat/.emacs.d/straight/repos/clojure-mode/clojure-mode.el

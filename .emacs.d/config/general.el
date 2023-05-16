@@ -39,7 +39,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq vc-follow-symlinks t)
 
-(when (< 26 emacs-major-version)
+(when (> 26 emacs-major-version)
   (tab-bar-mode 1)
   (setq tab-bar-show 1)
   (setq tab-bar-close-button-show nil)

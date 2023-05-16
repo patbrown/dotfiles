@@ -1,0 +1,1 @@
+/Users/pat/.emacs.d/straight/repos/solarized-emacs/solarized-selenized-dark-theme.el

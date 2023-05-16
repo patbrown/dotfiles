@@ -1,0 +1,1 @@
+/Users/pat/.emacs.d/straight/repos/git-gutter-fringe-plus/git-gutter-fringe+.el

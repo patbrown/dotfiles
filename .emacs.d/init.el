@@ -1,6 +1,7 @@
-(load-library "~/.emacs.d/bootstrap.el")
-(mapc 'load (file-expand-wildcards "~/.emacs.d/config/*.el"))
-(mapc 'load-library (file-expand-wildcards "~/.emacs.d/config/*.el"))
+(setq init-file-location (file-name-directory (or load-file-name (buffer-file-name))))
+(load-library (format "%sbootstrap.el" init-file-location))
+(mapc 'load (file-expand-wildcards (format "%sconfig/*.el" init-file-location)))
+(mapc 'load-library (file-expand-wildcards (format "%sconfig/*.el" init-file-location)))
 
 (global-unset-key (kbd "<left>"))
 (global-unset-key (kbd "<right>"))
@@ -8,11 +9,3 @@
 (global-unset-key (kbd "<down>"))
 (global-unset-key (kbd "C-v"))
 (global-unset-key (kbd "M-s"))
-
-(if (eq system-type 'darwin)
-    (mapc 'load (file-expand-wildcards "~/.emacs.d/macos/*.el"))
-  (mapc 'load (file-expand-wildcards "~/.emacs.d/linux/*.el")))
-
-(if (eq system-type 'darwin)
-    (mapc 'load-library (file-expand-wildcards "~/.emacs.d/macos/*.el"))
-    (mapc 'load-library (file-expand-wildcards "~/.emacs.d/linux/*.el")))

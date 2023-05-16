@@ -1,0 +1,1 @@
+/Users/pat/.emacs.d/straight/repos/disable-mouse/disable-mouse.el

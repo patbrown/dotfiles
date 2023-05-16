@@ -1,0 +1,1 @@
+/Users/pat/.emacs.d/straight/repos/frog-jump-buffer/frog-jump-buffer.el
