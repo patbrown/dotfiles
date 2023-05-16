@@ -2,8 +2,7 @@
 export GPGUSER="Patrick Brown"
 export EMAIL="pat@drilling.net"
 
-export ZDOTDIR=$HOME/.config/zsh
-source $ZDOTDIR/.zshrc
+export ZDOTDIR=$HOME/zsh
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -111,4 +110,13 @@ export FZF_CTRL_T_OPTS="--header 'ENTER to edit' --reverse --preview='pistol {}'
 
 export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
-source ~/.config/zsh/key-bindings.zsh
+source ~/zsh/key-bindings.zsh
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+export ZSH="$ZDOTDIR/ohmyzsh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+plugins=(asdf git web-search dirhistory zsh-autosuggestions)
+source $ZSH/oh-my-zsh.sh
+[[ ! -f ~/zsh/.p10k.zsh ]] || source ~/zsh/.p10k.zsh
+export FZF_DEFAULT_OPTS="--extended"
